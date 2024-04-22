@@ -1,0 +1,35 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/team",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5100
+        }
+      ],
+      "DownstreamPathTemplate": "/api/team"
+    },
+    {
+      "UpstreamPathTemplate": "/api/driver",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5288
+        }
+      ],
+      "DownstreamPathTemplate": "/api/driver"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5027"
+  }
+}
